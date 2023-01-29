@@ -66,19 +66,41 @@ def check_cards():
 
 # Code
 
-# Page 1 
+# front - with instructions
+
+print()
+page_break()
+print()
+print("Welcome to the game of Bet the Highest Number. You will be given 6 cards to play with. Enter the highest number and compete against 2 players online.")
+print()
+time.sleep(2)
+print("Please input only card numbers GIVEN. The game will kick you out if you try cheating.")
+print()
+time.sleep(2)
+print("Have fun.")
+page_break()
+time.sleep(2)
+print("Game is starting now.... Get ready")
+time.sleep(2)
+
+# Page 1 (after instructions)
 page_break()
 print("Here are your cards:")
 user_cards1 = random.choice(card_pack) # 1st Card
 print(user_cards1)
+time.sleep(1)
 user_cards2 = random.choice(card_pack) # 2nd Card
 print(user_cards2)
+time.sleep(1)
 user_cards3 = random.choice(card_pack) # 3rd Card
 print(user_cards3)
+time.sleep(1)
 user_cards4 = random.choice(card_pack) #4th card
 print(user_cards4)
+time.sleep(1)
 user_cards5 = random.choice(card_pack) # 5th Card
 print(user_cards5)
+time.sleep(1)
 user_cards6 = random.choice(card_pack) # 6th Card
 print(user_cards6)
 page_break()
@@ -101,6 +123,8 @@ else:
         c = opp2
 
     # Game Begins
+
+time.sleep(1)
 
 print("The game starts. You have 4 seconds to decide which card you would like to put down. The card with the highest value wins. The goal of the game is to have the highest amount of cards at the end.")
 list_cards = [user_cards1, user_cards2, user_cards3, user_cards4, user_cards5, user_cards6]
@@ -177,3 +201,4 @@ while True:
     print("Your cards now:")
     print(list_cards)
     page_break()
+    time.sleep(2)
