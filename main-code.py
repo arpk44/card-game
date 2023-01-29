@@ -4,9 +4,10 @@ import random
 # Game Cards
 
 card_pack = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-opponent_names = ["stally_ally101", "mckenna", "loepara", "badbunny", "cutehoney", "charles", "reaac", "planesea", "asia", "hannah", "bihana", "taylor s."]
+opponent_names = ["kingping", "hannah", "taylor", "benedict", "cambio", "tigersugar", "jasmine", "john", "albert", "merrita", "alphered", "sung", "lilia", "nidhi", "sarah", "joe", "jim", "calvert", "memphis"]
 
 # All Functions
+
 def page_break():
     print("---------------------------------------------------------------------------")
 
@@ -102,7 +103,7 @@ else:
     # Game Begins
 
 print("The game starts. You have 4 seconds to decide which card you would like to put down. The card with the highest value wins. The goal of the game is to have the highest amount of cards at the end.")
-
+list_cards = [user_cards1, user_cards2, user_cards3, user_cards4, user_cards5, user_cards6]
 
 while True:
 
@@ -111,19 +112,24 @@ while True:
 
     card_enter = int(card_enter)
     # Card FUnction
-
     if card_enter == user_cards1:
         print(user_cards1, " is being put in")
+        list_cards.remove(user_cards1)
     elif card_enter == user_cards2:
         print(user_cards2, " is being put in")
+        list_cards.remove(user_cards2)
     elif card_enter == user_cards3:
+        list_cards.remove(user_cards3)
         print(user_cards3, " is being put in")
     elif card_enter == user_cards4:
+        list_cards.remove(user_cards4)
         print(user_cards4, " is being put in")
     elif card_enter == user_cards5:
         print(user_cards5, " is being put in")
+        list_cards.remove(user_cards5)
     elif card_enter == user_cards6:
         print(user_cards6, " is being put in")
+        list_cards.remove(user_cards6)
     else:
         print("Invalid Card")
         print("Put a real card.")
@@ -162,8 +168,7 @@ while True:
                 print(user_cards6, " is being put in")
             else:
                 break
-    list_cards = [user_cards1, user_cards2, user_cards3, user_cards4, user_cards5, user_cards6]
-    list_cards.remove(card_enter)
+    
     opp1_card = random.choice(card_pack)
     opp2_card = random.choice(card_pack)
     time.sleep(2)
